@@ -1,0 +1,61 @@
+///////////////////////// SQL /////////////////// SQL //////
+INTEGER
+DECIMAL
+FLOAT
+SERIAL
+NULL
+VARCHAR
+
+CREATE
+READ
+UPDATE
+DELETE
+
+// KEY WORD
+SELECT
+FROM
+DISTINCT
+WHERE
+LIKE
+
+
+//////////////////////////////////////////////////////////////
+
+SELECT * FROM invoice
+WHERE billingstate IN ('CA', 'AZ', 'TX');
+
+//////////////////////////////////////////////////////////////
+
+SELECT * FROM invoice
+WHERE total BETWEEN 5 AND 10;
+
+//////////////////////////////////////////////////////////////
+
+SELECT * FROM track
+LIMIT 100 OFFSET 100;
+
+////////////////////// CREATE   //////////////////////////////////////////
+
+CREATE table people (
+  /* 	ID serial primary key	 */
+    id integer primary key autoincrement,
+    name varchar(255) not null,
+    hacker_name varchar(255),
+    age integer
+  );
+
+////////////////////////////  INSERT  ///////////////////////////////
+
+INSERT INTO people(name, hacker_name, age)
+VALUES ('VU', 'CRASHDOOM', 30);
+
+//////////////////////////////////  UPDATE ////////////////////
+UPDATE people
+SET name = 'logan'
+WHERE name = 'VU';
+
+//////////////////////////  DELETE //////////////
+DELETE FROM people WHERE name = 'logan';
+
+///////////////////////////////////////////////
+DROP TABLE people;
